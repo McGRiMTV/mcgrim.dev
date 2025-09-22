@@ -8,29 +8,40 @@
     <style>
         :root {
             --discord-blurple: #5865F2;
-            --discord-dark: #23272A;
-            --discord-gray: #2C2F33;
-            --discord-light-gray: #99AAB5;
             --discord-white: #FFFFFF;
         }
 
         body {
-            background-color: var(--discord-dark);
+            background-image: url('./assets/car.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            
             color: var(--discord-white);
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             text-align: center;
+            padding: 1rem;
         }
 
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 2rem;
+            width: 100%;
+            max-width: 550px;
+            padding: 2.5rem;
+            
+            background: rgba(10, 10, 10, 0.35);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
 
         .profile-photo {
@@ -46,13 +57,15 @@
             font-size: 2.5rem;
             font-weight: bold;
             margin: 0;
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
         }
 
         .title {
             font-size: 1.2rem;
-            color: var(--discord-light-gray);
+            color: rgba(255, 255, 255, 0.9);
             margin-top: 0.5rem;
             margin-bottom: 2rem;
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
         }
 
         .project {
@@ -60,6 +73,7 @@
             font-weight: bold;
             margin-top: 2rem;
             margin-bottom: 0.5rem;
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
         }
 
         .links-grid {
@@ -79,14 +93,19 @@
             font-size: 1.1rem;
             font-weight: 600;
             transition: transform 0.2s ease, background-color 0.2s ease;
+            border: 1px solid transparent;
         }
 
         .link-button:hover {
             background-color: #4752C4;
             transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
         }
 
         @media (max-width: 600px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
             .profile-photo {
                 width: 120px;
                 height: 120px;
